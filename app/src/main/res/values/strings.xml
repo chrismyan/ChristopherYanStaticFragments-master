@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ChristopherYanStaticFragments</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_numbers_txt">Enter 2 Numbers</string>
+    <string name="btnMultiply">Multiply</string>
+    <string name="btnAdd">Add</string>
+</resources>
