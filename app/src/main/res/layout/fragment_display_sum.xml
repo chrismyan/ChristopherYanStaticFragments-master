@@ -2,12 +2,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="edu.westga.christopheryanstaticfragments.DisplaySumFragment">
+    tools:context="edu.westga.christopheryanstaticfragments.DisplaySumFragment"
+    android:id="@+id/addTextView">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:text="@string/sumDisplayTxt"
+        android:textSize="20dp"
+        android:gravity="center_horizontal"
+        android:id="@+id/sumTextView" />
 
 </FrameLayout>

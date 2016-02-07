@@ -10,7 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements DataEntryFragment.DataEntryListener {
+public class MainActivity extends AppCompatActivity implements DataEntryFragment.DataEntryListener, DataDisplayFragment.DataAddEntryListener {
 
     @Override
     public void onDataEntry(double first, double second) {
@@ -80,5 +80,36 @@ public class MainActivity extends AppCompatActivity implements DataEntryFragment
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onDataAddEntry(double first, double second) {
+        DisplaySumFragment displaySumFragment = (DisplaySumFragment)getSupportFragmentManager().findFragmentById(R.id.dataDisplayAddfragment);
+
+        TextView firstNumber = (TextView)  findViewById(R.id.editText);
+        String firstNumberStr = firstNumber.getText().toString();
+
+        TextView secondNumber = (TextView)  findViewById(R.id.editText2);
+        String secondNumberStr = secondNumber.getText().toString();
+
+        // Validate values of first and second number
+        double firstNumberDbl;
+        if(firstNumberStr == null || firstNumberStr.isEmpty()) {
+            firstNumberDbl = 0.0;
+        } else {
+            firstNumberDbl = Double.parseDouble(firstNumber.getText().toString());
+        }
+
+        double secondNumberDbl;
+        if(secondNumberStr == null || secondNumberStr.isEmpty()) {
+            secondNumberDbl = 0.0;
+        } else {
+            secondNumberDbl = Double.parseDouble(secondNumber.getText().toString());
+        }
+
+        displaySumFragment.setFirstNumber(firstNumberDbl);
+        displaySumFragment.setSecondNumber(secondNumberDbl);
+        displaySumFragment.sum();
+        displaySumFragment.displaySum();
     }
 }

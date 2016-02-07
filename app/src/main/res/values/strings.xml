@@ -6,4 +6,5 @@
     <string name="enter_numbers_txt">Enter 2 Numbers</string>
     <string name="btnMultiply">Multiply</string>
     <string name="btnAdd">Add</string>
+    <string name="sumDisplayTxt">0</string>
 </resources>

@@ -35,5 +35,13 @@
             android:id="@+id/dataDisplayFragment"
             android:layout_gravity="center_horizontal"
             tools:layout="@layout/fragment_data_display" />
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:name="edu.westga.christopheryanstaticfragments.DisplaySumFragment"
+            android:id="@+id/dataDisplayAddfragment"
+            android:layout_gravity="center_horizontal"
+            tools:layout="@layout/fragment_display_sum" />
     </LinearLayout>
 </RelativeLayout>
